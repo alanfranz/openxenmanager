@@ -33,7 +33,7 @@ import pdb
 import rrdinfo
 import time
 import gobject
-from messages import messages, messages_header
+from openxenmanager.messages import messages, messages_header
 from oxcSERVER_vm_network import *
 from oxcSERVER_vm_storage import *
 from oxcSERVER_vm_snapshot import *

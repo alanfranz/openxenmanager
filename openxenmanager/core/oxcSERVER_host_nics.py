@@ -33,7 +33,7 @@ import pdb
 import rrdinfo
 import time
 import gobject
-from messages import messages, messages_header
+from openxenmanager.messages import messages, messages_header
 
 class oxcSERVERhostnics:
     def delete_nic(self, ref_nic, ref_vm, delete_network=True):

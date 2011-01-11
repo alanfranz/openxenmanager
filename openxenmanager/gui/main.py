@@ -57,7 +57,6 @@ import gtk
 import gobject
 # For md5 and xtea
 import hashlib, xtea
-from oxcSERVER import *
 from pprint import pprint
 import signal
 import atexit
@@ -73,18 +72,20 @@ if sys.platform != "win32":
 else:
     # On windows is needed run gobject threads
     gobject.threads_init()
+import xdot
+
+from openxenmanager.core.main import *
 
 # Splitted classes for oxcWindow
-from window_vm import * 
-from window_host import * 
-from window_properties import * 
-from window_storage import * 
-from window_alerts import * 
-from window_addserver import * 
-from window_newvm import * 
-from window_menuitem import * 
-from window_tools import * 
-import xdot
+from openxenmanager.gui.window_vm import * 
+from openxenmanager.gui.window_host import * 
+from openxenmanager.gui.window_properties import * 
+from openxenmanager.gui.window_storage import * 
+from openxenmanager.gui.window_alerts import * 
+from openxenmanager.gui.window_addserver import * 
+from openxenmanager.gui.window_newvm import * 
+from openxenmanager.gui.window_menuitem import * 
+from openxenmanager.gui.window_tools import * 
 
 class MyDotWindow(xdot.DotWindow):
 
@@ -1195,7 +1196,7 @@ class oxcWindow(oxcWindowVM,oxcWindowHost,oxcWindowProperties,oxcWindowStorage,o
                         self.vnc.set_shared_flag(True)
                         self.vnc.connect("vnc-disconnected", self.vnc_disconnected)
                         self.vnc.connect("key_press_event", self.on_console_area_key_press_event)
-                        from tunnel import Tunnel
+                        from openxenmanager.tunnel import Tunnel
                         if self.selected_type == "host":
                             ref = self.xc_servers[self.selected_host].host_vm[self.selected_ref][0]
                         else:
@@ -1219,7 +1220,7 @@ class oxcWindow(oxcWindowVM,oxcWindowHost,oxcWindowProperties,oxcWindowStorage,o
                             print "No console available"
 
                     elif sys.platform == "darwin":
-                        from tunnel import Tunnel
+                        from openxenmanager.tunnel import Tunnel
                         if self.selected_type == "host":
                             ref = self.xc_servers[self.selected_host].host_vm[self.selected_ref][0]
                         else:

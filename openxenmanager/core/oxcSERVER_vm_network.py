@@ -33,7 +33,7 @@ import pdb
 import rrdinfo
 import time
 import gobject
-from messages import messages, messages_header
+from openxenmanager.messages import messages, messages_header
 
 class oxcSERVERvmnetwork:
     def vm_remove_interface(self, vm_ref, vif_ref):

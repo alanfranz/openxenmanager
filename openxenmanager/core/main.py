@@ -31,7 +31,6 @@ import rrdinfo
 import time
 import put
 import gobject
-from rrd import RRD, XPORT
 import xml.sax.saxutils as saxutils
 import traceback
 
@@ -39,17 +38,20 @@ from threading import Thread
 from configobj import ConfigObj
 from operator import itemgetter
 from pygtk_chart import line_chart
-from messages import messages, messages_header
 
-from oxcSERVER_vm import *
-from oxcSERVER_host import *
-from oxcSERVER_properties import *
-from oxcSERVER_storage import *
-from oxcSERVER_alerts import *
-from oxcSERVER_addserver import *
-from oxcSERVER_newvm import *
-from oxcSERVER_menuitem import *
-from capabilities import capabilities_text
+from rrd import RRD, XPORT
+
+from openxenmanager.messages import messages, messages_header
+
+from openxenmanager.core.oxcSERVER_vm import *
+from openxenmanager.core.oxcSERVER_host import *
+from openxenmanager.core.oxcSERVER_properties import *
+from openxenmanager.core.oxcSERVER_storage import *
+from openxenmanager.core.oxcSERVER_alerts import *
+from openxenmanager.core.oxcSERVER_addserver import *
+from openxenmanager.core.oxcSERVER_newvm import *
+from openxenmanager.core.oxcSERVER_menuitem import *
+from openxenmanager.capabilities import capabilities_text
 
 class oxcSERVER(oxcSERVERvm,oxcSERVERhost,oxcSERVERproperties,oxcSERVERstorage,oxcSERVERalerts,oxcSERVERaddserver,oxcSERVERnewvm,oxcSERVERmenuitem):
     session_uuid = None

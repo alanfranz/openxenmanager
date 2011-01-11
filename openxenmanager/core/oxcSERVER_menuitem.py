@@ -33,8 +33,8 @@ import pdb
 import rrdinfo
 import time
 import gobject
-from messages import messages, messages_header
-from capabilities import capabilities_text
+from openxenmanager.messages import messages, messages_header
+from openxenmanager.capabilities import capabilities_text
 
 class oxcSERVERmenuitem:
     last_pool_data = []

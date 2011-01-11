@@ -19,7 +19,7 @@
 # -----------------------------------------------------------------------
 #!/usr/bin/env python
 import gtk
-from oxcSERVER import *
+from openxenmanager.core.main import *
 import xtea
 from thread import *
 import pdb

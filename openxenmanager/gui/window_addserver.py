@@ -19,7 +19,8 @@
 # -----------------------------------------------------------------------
 #!/usr/bin/env python
 import xtea
-from oxcSERVER import *
+from openxenmanager.core.main import *
+
 class oxcWindowAddServer:
     """
     Class with functions to manage "add server" window
