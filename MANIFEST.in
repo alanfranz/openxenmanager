@@ -1,0 +1,4 @@
+graft openxenmanager/images
+graft openxenmanager/images_map
+include openxenmanager/vncviewer.exe
+
