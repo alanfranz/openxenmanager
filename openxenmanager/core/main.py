@@ -39,7 +39,7 @@ from configobj import ConfigObj
 from operator import itemgetter
 from pygtk_chart import line_chart
 
-from rrd import RRD, XPORT
+from openxenmanager.core.rrd import RRD, XPORT
 
 from openxenmanager.messages import messages, messages_header
 

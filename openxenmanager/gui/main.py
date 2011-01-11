@@ -1806,8 +1806,11 @@ class oxcWindow(oxcWindowVM,oxcWindowHost,oxcWindowProperties,oxcWindowStorage,o
         else:
             return '%d' % n
 
-
-if __name__ == "__main__":
+def run_gui():
         # Main function
         wine = oxcWindow()
         gtk.main()
+
+if __name__ == "__main__":
+    run_gui()
+
