@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "openxenmanager",
-    install_requires = ["pydenji"],
+    install_requires = ["pydenji", "setuptools"],
     version = "0.1.0", # if possible try keeping sync with spectemplate file
     packages = find_packages(),
     author = "A. G. Rodriguez",
